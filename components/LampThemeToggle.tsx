@@ -13,6 +13,7 @@ export function LampThemeToggle() {
   }, []);
 
   const isDark = mounted && resolvedTheme === "dark";
+  const hintColor = isDark ? "#94a3b8" : "#475569";
 
   const handleToggle = () => {
     setTheme(isDark ? "light" : "dark");
@@ -20,18 +21,6 @@ export function LampThemeToggle() {
 
   return (
     <div className="relative mx-auto flex h-[19rem] w-full max-w-[34rem] items-end justify-center sm:h-[29rem]">
-      {mounted ? (
-        <motion.span
-          aria-hidden="true"
-          className="pointer-events-none absolute left-[70%] top-[3.9rem] z-10 flex items-center gap-2 text-[0.76rem] font-normal italic text-slate-500/85 dark:text-slate-300/75 sm:left-[68%] sm:top-[5rem]"
-          initial={{ opacity: 0, y: 4 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.35 }}
-        >
-          lights?
-        </motion.span>
-      ) : null}
-
       <motion.span
         aria-hidden="true"
         className={`absolute left-1/2 top-20 h-56 w-56 -translate-x-1/2 rounded-full bg-lamp/30 blur-3xl transition-opacity duration-150 dark:bg-teal/10 ${
@@ -58,6 +47,41 @@ export function LampThemeToggle() {
             <stop offset="1" stopColor={isDark ? "#9f8cff" : "#f5d7e8"} />
           </linearGradient>
         </defs>
+
+        <motion.g
+          aria-hidden="true"
+          initial={{ opacity: 0, y: 4 }}
+          animate={{ opacity: mounted ? 1 : 0, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+        >
+          <text
+            x="96"
+            y="68"
+            fill={hintColor}
+            fontFamily="Georgia, serif"
+            fontSize="22"
+            fontStyle="italic"
+            fontWeight="400"
+            letterSpacing="0"
+          >
+            click me
+          </text>
+          <path
+            d="M188 62 C212 62 235 72 248 90"
+            fill="none"
+            stroke={hintColor}
+            strokeWidth="2.5"
+            strokeLinecap="round"
+          />
+          <path
+            d="M234 84 L250 92 L244 76"
+            fill="none"
+            stroke={hintColor}
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </motion.g>
 
         <motion.path
           d="M308 66 L230 352 H386 Z"
