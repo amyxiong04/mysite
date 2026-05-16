@@ -34,8 +34,13 @@ export function LampThemeToggle() {
 
       <motion.span
         aria-hidden="true"
-        className="absolute left-1/2 top-20 h-56 w-56 -translate-x-1/2 rounded-full bg-lamp/30 blur-3xl dark:bg-teal/10"
-        animate={{ opacity: isDark ? 0.32 : 0.95, scale: isDark ? 0.86 : 1.08 }}
+        className={`absolute left-1/2 top-20 h-56 w-56 -translate-x-1/2 rounded-full bg-lamp/30 blur-3xl transition-opacity duration-150 dark:bg-teal/10 ${
+          mounted ? "opacity-100" : "opacity-0"
+        }`}
+        animate={{
+          opacity: mounted ? (isDark ? 0.32 : 0.95) : 0,
+          scale: isDark ? 0.86 : 1.08,
+        }}
         transition={{ duration: 0.45 }}
       />
 
@@ -43,7 +48,9 @@ export function LampThemeToggle() {
         viewBox="0 -64 560 504"
         role="img"
         aria-label="Illustrated desk with computer, plant, and lamp"
-        className="pointer-events-none relative h-full w-full drop-shadow-xl"
+        className={`pointer-events-none relative h-full w-full drop-shadow-xl transition-opacity duration-150 ${
+          mounted ? "opacity-100" : "opacity-0"
+        }`}
       >
         <defs>
           <linearGradient id="screenGlow" x1="0" x2="1" y1="0" y2="1">
