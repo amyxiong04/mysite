@@ -19,11 +19,11 @@ export function LampThemeToggle() {
   };
 
   return (
-    <div className="relative mx-auto flex h-[24rem] w-full max-w-[34rem] items-end justify-center sm:h-[29rem]">
+    <div className="relative mx-auto flex h-[19rem] w-full max-w-[34rem] items-end justify-center sm:h-[29rem]">
       {mounted ? (
         <motion.span
           aria-hidden="true"
-          className="pointer-events-none absolute left-[45%] top-[5.05rem] z-10 flex items-center gap-2 text-[0.76rem] font-normal italic text-slate-500/85 dark:text-slate-300/75 sm:top-[5.6rem]"
+          className="pointer-events-none absolute left-[70%] top-[3.9rem] z-10 flex items-center gap-2 text-[0.76rem] font-normal italic text-slate-500/85 dark:text-slate-300/75 sm:left-[68%] sm:top-[5rem]"
           initial={{ opacity: 0, y: 4 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.35 }}

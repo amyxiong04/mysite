@@ -3,6 +3,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { HeaderThemeToggle } from "@/components/HeaderThemeToggle";
+import { SocialIconButtons } from "@/components/SocialIconButtons";
 import { navItems, profile } from "@/data/portfolio";
 
 export function Navbar() {
@@ -14,7 +15,11 @@ export function Navbar() {
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8 lg:px-10"
         aria-label="Primary navigation"
       >
-        <div aria-hidden="true" className="h-10 w-10" />
+        <div aria-hidden="true" className="hidden h-10 w-10 md:block" />
+
+        <div className="md:hidden">
+          <SocialIconButtons compact />
+        </div>
 
         <div className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
