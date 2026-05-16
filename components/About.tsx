@@ -10,23 +10,26 @@ export function About() {
         </div>
         <div className="card space-y-4 p-6 text-sm font-normal leading-7 text-slate-600 dark:text-slate-400 sm:p-8 sm:text-base">
           <p>
-            I&apos;m currently studying Computer Science at the University of
-            British Columbia and graduating in 2027.
+            I&apos;m a Computer Science student at the University of British
+            Columbia with software engineering experience in both enterprise and
+            research environments.
           </p>
           <p>
-            I originally got into software because I liked building things, but
-            what kept me interested was how much there is to learn. I enjoy
-            understanding how systems fit together, working through difficult
-            problems, and picking up new tools along the way.
+            Through my co-op experience, I&apos;ve worked on production software in
+            the maritime industry as well as technical tooling for cancer
+            research, which gave me exposure to very different kinds of
+            engineering work and team environments. I&apos;ve had the chance to work
+            across frontend and backend systems, contribute to production
+            codebases, and get a much better understanding of how software gets
+            built in practice.
           </p>
           <p>
-            So far, I&apos;ve worked in both enterprise software and research
-            environments, which gave me experience with very different kinds of
-            engineering work and helped me grow a lot as a developer.
+            I&apos;m especially interested in full-stack and backend engineering,
+            and I like work where there&apos;s always something new to figure out.
           </p>
           <p>
-            Lately, I&apos;ve been especially interested in full-stack development
-            and backend systems.
+            Outside of coding, I like drawing, baking, running, hiking, and
+            annoying my dog.
           </p>
         </div>
       </div>
