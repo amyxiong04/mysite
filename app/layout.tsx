@@ -11,9 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Amy Xiong | Software Engineering Portfolio",
+  title: "Amy Xiong",
   description:
-    "Personal portfolio for Amy Xiong, a UBC Computer Science student building full-stack products, backend systems, and practical tools.",
+    "Personal portfolio for Amy Xiong",
 };
 
 export default function RootLayout({
